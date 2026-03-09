@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0-DAY ACADEMY — Free Cybersecurity Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0b0b0f;color:#e8e8e8;font-family:'Fira Code','Courier New',monospace;line-height:1.7;overflow-x:hidden}
+
+  /* Nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.8rem 2rem;background:rgba(11,11,15,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.05);font-family:'Share Tech Mono',monospace;font-size:.75rem}
+  nav .logo{color:#00ff41;letter-spacing:.15em;font-size:.85rem}
+  nav .logo span{color:#fff}
+  nav .links{display:flex;gap:1.8rem}
+  nav .links a{color:#777;text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+  nav .links a:hover{color:#fff}
+
+  /* Hero */
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;background:#0b0b0f;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:
+    linear-gradient(rgba(0,255,65,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,65,.03) 1px,transparent 1px);
+    background-size:60px 60px;pointer-events:none;animation:grid-drift 20s linear infinite}
+  .hero::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:
+    radial-gradient(ellipse at 20% 50%,rgba(0,255,65,.08) 0%,transparent 50%),
+    radial-gradient(ellipse at 80% 50%,rgba(0,100,255,.06) 0%,transparent 50%),
+    radial-gradient(ellipse at 50% 100%,rgba(255,50,50,.05) 0%,transparent 40%);
+    pointer-events:none}
+  .hero>*{position:relative;z-index:1}
+  @keyframes grid-drift{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+  .hero h1{font-family:'Share Tech Mono',monospace;font-size:clamp(2.2rem,7vw,4.8rem);font-weight:400;letter-spacing:.18em;color:#fff;margin-bottom:.6rem;text-shadow:0 0 40px rgba(0,255,65,.15)}
+  .hero h1 span{color:#00ff41}
+  .tagline{font-size:clamp(.85rem,2vw,1.1rem);color:#aaa;max-width:560px;margin-bottom:3rem;font-weight:400}
+
+  /* Countdown */
+  .countdown-wrap{margin-bottom:3rem}
+  .countdown-label{font-size:.95rem;text-transform:uppercase;letter-spacing:.3em;color:#ff4444;margin-bottom:.8rem;animation:pulse-text 2s infinite}
+  .countdown{font-family:'Share Tech Mono',monospace;font-size:clamp(2rem,6vw,3.8rem);color:#ff3333;padding:.25em .7em;border:1px solid rgba(255,50,50,.3);border-radius:4px;background:rgba(255,50,50,.04);display:inline-block;letter-spacing:.12em;text-shadow:0 0 20px rgba(255,50,50,.4)}
+
+  /* CTA */
+  .cta{display:inline-block;padding:.9rem 2.6rem;font-family:'Share Tech Mono',monospace;font-size:1.1rem;color:#0b0b0f;background:#00ff41;border:none;border-radius:3px;cursor:pointer;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;animation:pulse-btn 2.5s ease-in-out infinite;transition:transform .2s,background .2s}
+  .cta:hover{transform:scale(1.04);background:#33ff66}
+
+  /* Modules */
+  .modules{padding:5rem 2rem;max-width:960px;margin:0 auto}
+  .modules h2{text-align:center;font-family:'Share Tech Mono',monospace;font-size:clamp(1.3rem,3.5vw,2rem);color:#fff;margin-bottom:.5rem;letter-spacing:.1em}
+  .modules .subtitle{text-align:center;color:#555;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:3rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+  .card{background:#111116;border:1px solid #1e1e28;border-radius:4px;padding:1.4rem 1.3rem;transition:border-color .3s,transform .3s}
+  .card:hover{border-color:#00ff41;transform:translateY(-3px)}
+  .card .label{font-size:.6rem;text-transform:uppercase;letter-spacing:.25em;color:#555;margin-bottom:.5rem}
+  .card h3{color:#fff;font-size:.95rem;margin-bottom:.4rem;font-weight:400}
+  .card p{font-size:.75rem;color:#666;line-height:1.6}
+
+  /* Footer */
+  footer{text-align:center;padding:3rem 1rem;color:#333;font-size:.7rem;letter-spacing:.1em;border-top:1px solid #151519}
+
+  /* Animations */
+  @keyframes pulse-btn{0%,100%{box-shadow:0 0 6px rgba(0,255,65,.3)}50%{box-shadow:0 0 20px rgba(0,255,65,.5),0 0 40px rgba(0,255,65,.15)}}
+  @keyframes pulse-text{0%,100%{opacity:1}50%{opacity:.45}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span>0D</span>_ACADEMY</div>
+  <div class="links">
+    <a href="#modules">Modules</a>
+    <a href="download.md" download>Download</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>0-DAY<span>_</span>ACADEMY</h1>
+  <p class="tagline">Deep-dive into offensive and defensive cybersecurity. From network recon to binary exploitation — master the skills that matter.</p>
+
+  <div class="countdown-wrap">
+    <div class="countdown-label">// free access expires in</div>
+    <div class="countdown" id="timer">08:00:00</div>
+  </div>
+
+  <a href="download.md" download class="cta">Grab It Free Now</a>
+</section>
+
+<section class="modules" id="modules">
+  <h2>$ cat /modules</h2>
+  <p class="subtitle">8 modules &middot; 40+ hours &middot; hands-on labs</p>
+  <div class="grid">
+    <div class="card">
+      <div class="label">Module 01</div>
+      <h3>Network Security</h3>
+      <p>TCP/IP deep dives, scanning, sniffing, firewall evasion, and man-in-the-middle attacks.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 02</div>
+      <h3>Web App Hacking</h3>
+      <p>SQL injection, XSS, CSRF, SSRF, authentication bypasses, and API exploitation.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 03</div>
+      <h3>Privilege Escalation</h3>
+      <p>Linux &amp; Windows privesc vectors, kernel exploits, misconfigurations, and SUID abuse.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 04</div>
+      <h3>OSINT</h3>
+      <p>Open-source intelligence gathering, social media recon, metadata analysis, and dorking.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 05</div>
+      <h3>Cryptography</h3>
+      <p>Symmetric &amp; asymmetric ciphers, hashing, PKI, and real-world crypto attack patterns.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 06</div>
+      <h3>Reverse Engineering</h3>
+      <p>Disassembly, debugging, binary patching, malware analysis, and anti-reversing techniques.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 07</div>
+      <h3>Social Engineering</h3>
+      <p>Phishing campaigns, pretexting, vishing, physical security, and human-factor exploits.</p>
+    </div>
+    <div class="card">
+      <div class="label">Module 08</div>
+      <h3>CTF Challenges</h3>
+      <p>Hands-on capture-the-flag labs across web, pwn, crypto, forensics, and misc categories.</p>
+    </div>
+  </div>
+</section>
+
+<footer>$ echo "&copy; 2026 0-Day Academy. All rights reserved."</footer>
+
+<script>
+(function(){
+  const EIGHT_HOURS=8*60*60*1000;
+  const timer=document.getElementById('timer');
+  function pad(n){return String(n).padStart(2,'0')}
+  function update(){
+    var r=EIGHT_HOURS-(Date.now()%EIGHT_HOURS);
+    var s=Math.floor(r/1000);
+    timer.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor((s%3600)/60))+':'+pad(s%60);
+  }
+  update();
+  setInterval(update,1000);
+})();
+</script>
+</body>
+</html>
